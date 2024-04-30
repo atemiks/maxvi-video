@@ -1,0 +1,38 @@
+@import "bootstrap";
+@import 'utils/mixins';
+@import 'utils/vars';
+@import 'utils/fonts';
+@import 'utils/base';
+@import 'utils/typography';
+
+/* components */
+@import 'components/logo';
+@import 'components/search';
+@import 'components/social';
+@import 'components/buttons';
+@import 'components/nav';
+@import 'components/breadcrumbs';
+@import 'components/specifications';
+@import "components/player";
+@import "components/modal";
+@import "components/suggestions";
+
+/* header */
+@import 'layout/header/header';
+
+/* cards */
+@import 'components/cards/card-video';
+
+/* sections */
+@import 'components/sections/section-gallery';
+@import 'components/sections/section-videos';
+@import 'components/sections/section-callout';
+
+/* pages */
+@import 'pages/product/product';
+
+/* footer */
+@import 'layout/footer/footer';
+
+/* offcanvas */
+@import 'layout/offcanvas/offcanvas';

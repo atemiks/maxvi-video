@@ -1,0 +1,66 @@
+.offcanvas {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: var(--header-height) 0.875rem 0.875rem;
+    background: $color-black;
+    color: $color-white;
+    transform: translateY(0);
+    transition: transform 300ms ease;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+
+    &[aria-hidden="true"] {
+        transform: translateY(-100%);
+    }
+
+    a {
+        color: currentColor;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        row-gap: 0.5rem;
+    }
+
+    &-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+        font-size: 1rem;
+
+        &__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            a {
+                opacity: 0.8;
+                display: block;
+                padding-top: 0.875rem;
+                padding-bottom: 0.875rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: opacity 300ms ease;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

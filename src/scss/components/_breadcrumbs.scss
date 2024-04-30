@@ -1,0 +1,40 @@
+.breadcrumbs {
+    @include breakpoint(lg) {
+        font-size: 1.125rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 0.55rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        display: flex;
+        column-gap: 0.87rem;
+
+        &:not(:first-child)::before {
+
+            content: '>';
+        }
+    }
+
+    &__link {
+        color: currentColor;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+
+        &[href]:hover {
+            color: $color-title;
+            text-decoration: none;
+        }
+
+        &:not([href]) {
+            color: $color-title;
+        }
+    }
+}

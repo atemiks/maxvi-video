@@ -1,0 +1,68 @@
+@import 'header-burger';
+@import 'header-search';
+@import 'header-global';
+@import 'header-contacts';
+
+.header {
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    color: $color-white;
+
+    &::before {
+        position: absolute;
+        z-index: -10;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: $color-black, $alpha: 0.8);
+        backdrop-filter: blur(8px);
+        content: '';
+    }
+
+    a {
+        color: currentColor;
+        text-decoration: none;
+        transition: opacity 300ms ease;
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
+    &__layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 0.875rem;
+
+        @include breakpoint(lg) {
+            column-gap: 4.375rem;
+        }
+    }
+
+    &__burger {
+        @include breakpoint(lg) {
+            display: none;
+        }
+    }
+
+    &__global {
+        display: none;
+
+        @include breakpoint(lg) {
+            display: block;
+        }
+    }
+
+    &__contacts {
+        display: none;
+
+        @include breakpoint(lg) {
+            display: flex;
+        }
+    }
+}

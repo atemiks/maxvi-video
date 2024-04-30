@@ -1,0 +1,27 @@
+.title-h1,
+.title-h2,
+.title-h3,
+.title-h4,
+.title-h5,
+.title-h6 {
+    margin: 0;
+    color: $color-title;
+}
+
+.link {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: $color-title;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,106 @@
+.section-gallery {
+    $this: &;
+
+    &+& {
+        margin-top: 3.4rem;
+    }
+
+    &__title {
+        margin: 0;
+        color: $color-title;
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.75rem 0.875rem;
+        margin-top: 1rem;
+
+        @include breakpoint(sm) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include breakpoint(lg) {
+            margin-top: 1.25rem;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) 10.85%;
+            gap: 1.125rem;
+        }
+    }
+
+    &__cta {
+        align-self: flex-start;
+    }
+
+    &-cta {
+        position: relative;
+        display: block;
+        border: 1px solid $color-border-gray;
+        border-radius: 10px;
+        color: $color-title;
+        font-size: 0.875rem;
+        text-align: center;
+        transition: box-shadow 300ms ease;
+
+        @include breakpoint(lg) {
+            padding: 1rem;
+            font-size: 1.25rem;
+            text-align: left;
+        }
+
+        &::before {
+            @include breakpoint(sm) {
+                display: block;
+                padding-top: 60%;
+                content: '';
+            }
+
+            @include breakpoint(lg) {
+                padding-top: 176.5%;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 4px 6px rgba($color-black, 0.1);
+        }
+
+        &__text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 0.25rem;
+            padding: 0.75rem;
+
+            @include breakpoint(lg) {
+                row-gap: 0.5rem;
+            }
+        }
+
+        &__icon {
+            align-self: center;
+            width: 4rem;
+            height: 4rem;
+
+            @include breakpoint(sm) {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            @include breakpoint(md) {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+
+            @include breakpoint(lg) {
+                width: 4.375rem;
+                height: 4.375rem;
+            }
+        }
+    }
+}

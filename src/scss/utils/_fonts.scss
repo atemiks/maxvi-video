@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Roboto";
+    font-weight: 100;
+    src:
+        local("Roboto"),
+        url("../fonts/Roboto/Roboto-Thin.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src:
+        local("Roboto"),
+        url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 500;
+    src:
+        local("Roboto"),
+        url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    src:
+        local("Roboto"),
+        url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    src:
+        local("Montserrat"),
+        url("../fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    src:
+        local("Montserrat"),
+        url("../fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-weight: 400;
+    src:
+        local("PT Sans"),
+        url("../fonts/PT-Sans/PTSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-weight: 700;
+    src:
+        local("PT Sans Bold"),
+        url("../fonts/PT-Sans/PTSans-Bold.ttf") format("truetype");
+}

@@ -1,0 +1,199 @@
+.nav {
+    $this: &;
+
+    overflow-y: auto;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.875rem;
+    background: $color-white;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+
+    @include breakpoint(lg) {
+        overflow: visible;
+        position: relative;
+        z-index: 10;
+        padding: 0;
+        overscroll-behavior: auto;
+    }
+
+    &[aria-hidden="true"] {
+        display: none;
+    }
+
+    li {
+        position: relative;
+    }
+
+    a {
+        display: inline-block;
+        color: currentColor;
+        text-decoration: none;
+    }
+
+    &-switcher {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.5rem;
+        font-size: 1rem;
+
+        @include breakpoint(lg) {
+            display: none;
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        z-index: 10;
+        top: 0.875rem;
+        right: 0.875rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: none;
+        border-radius: 50%;
+        background: $color-border-gray;
+        color: $color-black;
+
+        @include breakpoint(lg) {
+            display: none;
+        }
+    }
+
+    &__toggle {}
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: $color-title;
+        font-size: 1rem;
+    }
+
+    &__sublist {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 1.25rem 0.975rem;
+        padding: 0;
+        color: $color-body;
+        font-size: 0.875rem;
+        list-style: none;
+
+        &[aria-hidden="true"] {
+            display: none;
+        }
+
+        #{$this}__toggle,
+        #{$this}__link {
+            padding-top: 0.125rem;
+            padding-bottom: 0.125rem;
+        }
+
+        #{$this}__sublist {
+            margin: 0 0 0.45rem 1.7rem;
+        }
+    }
+
+    &__link {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    &__hint {
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+
+        #{$this} li:hover>& {
+            @include breakpoint(lg) {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &-toggle {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        margin: 0;
+        padding: 0.25rem 0;
+        border: none;
+        border-radius: 0;
+        background: none;
+        font-family: inherit;
+        font-size: inherit;
+        color: currentColor;
+        text-align: left;
+
+        &--secondary {
+            color: $color-body;
+        }
+
+        &__icon {
+            flex-shrink: 0;
+            color: $color-body;
+        }
+
+        &__arrow {
+            flex-shrink: 0;
+            color: $color-title;
+            transition: transform 300ms ease;
+
+            [aria-expanded="true"] & {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &-hint {
+        $hint-border-width: 1px;
+        $hint-inline-offset: 0.25rem;
+
+        pointer-events: none;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: -$hint-inline-offset;
+        right: -$hint-inline-offset;
+        bottom: 0;
+        font-size: 0.625rem;
+
+        &::before {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: $hint-border-width solid $color-border-dark-gray;
+            border-right: none;
+            background-color: $color-white;
+            content: '';
+        }
+
+        &__text {
+            position: absolute;
+            top: 0;
+            left: calc(100% - $hint-border-width);
+            width: 20.5rem;
+            padding: 0.375rem;
+            border: $hint-border-width solid $color-border-dark-gray;
+            background-color: rgba($color: $color-white, $alpha: 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba($color: $color-black, $alpha: 0.1);
+            color: $color-black;
+            transition: opacity 300ms ease;
+        }
+    }
+}

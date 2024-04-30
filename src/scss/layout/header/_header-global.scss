@@ -1,0 +1,9 @@
+.header-global {
+    display: none;
+    text-align: center;
+    line-height: 1.15;
+
+    @include breakpoint(lg) {
+        display: block;
+    }
+}

@@ -1,0 +1,40 @@
+$breakpoints: (
+    xs: 0px,
+    sm: 480px,
+    md: 640px,
+    lg: 992px,
+    xl: 1280px,
+    2xl: 1440px,
+    3xl: 1920px,
+);
+
+:root {
+    --header-height: 3.75rem;
+    --container-padding-x: 1rem;
+
+    @include breakpoint(sm) {
+        --container-padding-x: 5rem;
+    }
+
+    @include breakpoint(lg) {
+        --container-padding-x: 1rem;
+    }
+}
+
+$container: 1200px;
+$container-lg: 1440px;
+
+$font-family-base: "PT Sans";
+$font-family-title: "Montserrat";
+$font-family-secondary: "Roboto";
+
+$color-body: #848484;
+$color-title: #000000;
+$color-primary: #0096D5;
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #A9A9A9;
+$color-dark-gray: #333333;
+$color-secondary: #535766;
+$color-border-gray: #E5E5E5;
+$color-border-dark-gray: #848484;

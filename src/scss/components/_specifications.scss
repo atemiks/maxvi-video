@@ -1,0 +1,54 @@
+.specifications {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25rem;
+
+    @include breakpoint(lg) {
+        row-gap: 1rem;
+    }
+
+    &__title {
+        margin: 0;
+        color: $color-title;
+        font-size: 0.875rem;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @include breakpoint(lg) {
+            font-size: 1rem;
+        }
+    }
+
+    &__list {
+        margin: 0;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        &::before {
+            display: block;
+            flex-grow: 1;
+            height: 0.25rem;
+            background-image: radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0);
+            background-size: 0.3em;
+            content: '';
+        }
+    }
+
+    &__label {
+        order: -1;
+    }
+
+    &__description {
+        margin: 0;
+        color: $color-title;
+    }
+
+    &__cta {
+        align-self: flex-start;
+    }
+}

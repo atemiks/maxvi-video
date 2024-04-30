@@ -1,0 +1,25 @@
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__link {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 0.75rem;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        width: 2rem;
+        height: 2rem;
+
+        @include breakpoint(lg) {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+}

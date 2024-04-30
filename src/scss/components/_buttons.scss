@@ -1,0 +1,19 @@
+.button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 300ms ease;
+}
+
+.button--primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+        background-color: darken($color: $color-primary, $amount: 10);
+    }
+}

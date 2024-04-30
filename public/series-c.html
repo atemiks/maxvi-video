@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Maxvi Video</title>
+
+        <link rel="stylesheet" href="css/app.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__layout container">
+                <button
+                    type="button"
+                    id="offcanvas-toggle"
+                    aria-expanded="false"
+                    aria-controls="offcanvas"
+                    class="header__burger header-burger"
+                    aria-label="Меню"
+                >
+                    <span class="header-burger__line"></span>
+                    <span class="header-burger__line"></span>
+                    <span class="header-burger__line"></span>
+                </button>
+
+                <a href="/" class="header__logo logo">
+                    <img
+                        src="images/logo-maxvi-video-mobile.svg"
+                        class="logo__image logo__image--mobile"
+                        width="164"
+                        height="25"
+                        alt="Maxvi Видео"
+                    />
+
+                    <img
+                        src="images/logo-maxvi-video.svg"
+                        class="logo__image logo__image--desktop"
+                        width="242"
+                        height="25"
+                        alt="Maxvi Видео"
+                    />
+                </a>
+
+                <div class="header__search header-search">
+                    <button
+                        type="button"
+                        id="header-search-toggle"
+                        aria-expanded="false"
+                        aria-controls="header-search-popup"
+                        aria-label="Поиск"
+                        class="header-search__toggle"
+                    >
+                        <svg class="header-search__icon" width="16" height="16">
+                            <use
+                                xlink:href="images/icons/sprite.svg#icon-search"
+                            ></use>
+                        </svg>
+                    </button>
+
+                    <div
+                        id="header-search-popup"
+                        aria-hidden="true"
+                        class="header-search__overlay"
+                    >
+                        <div class="header-search__content">
+                            <form action="" class="header-search__form">
+                                <input
+                                    type="search"
+                                    class="header-search__input"
+                                    inputmode="search"
+                                    placeholder="Введите название модели"
+                                />
+                                <button
+                                    type="submit"
+                                    class="header-search__button"
+                                    aria-label="Искать"
+                                >
+                                    <svg
+                                        class="header-search__icon"
+                                        width="18"
+                                        height="18"
+                                    >
+                                        <use
+                                            xlink:href="images/icons/sprite.svg#icon-search"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </form>
+
+                            <ul
+                                id="header-search-suggestion"
+                                aria-hidden="true"
+                                class="header-search__suggestions suggestions"
+                            >
+                                <li class="suggestions__item">
+                                    <div
+                                        class="suggestions__categories suggestions-categories"
+                                    >
+                                        <span
+                                            class="suggestions-categories__title"
+                                        >
+                                            Открыть раздел
+                                        </span>
+
+                                        <ul
+                                            class="suggestions-categories__list"
+                                        >
+                                            <li
+                                                class="suggestions-categories__item"
+                                            >
+                                                <a
+                                                    href="series-c.html"
+                                                    class="suggestions-categories__link"
+                                                >
+                                                    <span
+                                                        class="suggestions-categories__icon"
+                                                    >
+                                                        А
+                                                    </span>
+                                                    <span>
+                                                        Автомобильные ЗУ
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li
+                                                class="suggestions-categories__item"
+                                            >
+                                                <a
+                                                    href="series-c.html"
+                                                    class="suggestions-categories__link"
+                                                >
+                                                    <span
+                                                        class="suggestions-categories__icon"
+                                                    >
+                                                        К
+                                                    </span>
+                                                    <span>К серия</span>
+                                                </a>
+                                            </li>
+
+                                            <li
+                                                class="suggestions-categories__item"
+                                            >
+                                                <a
+                                                    href="series-c.html"
+                                                    class="suggestions-categories__link"
+                                                >
+                                                    <span
+                                                        class="suggestions-categories__icon"
+                                                    >
+                                                        Р
+                                                    </span>
+                                                    <span>Р серия</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="suggestions__item">
+                                    <a
+                                        href="product.html"
+                                        class="suggestions__link"
+                                    >
+                                        <svg
+                                            class="suggestions__icon"
+                                            width="16"
+                                            height="16"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-search"
+                                            ></use>
+                                        </svg>
+
+                                        Maxvi P11
+                                    </a>
+                                </li>
+
+                                <li class="suggestions__item">
+                                    <a
+                                        href="product.html"
+                                        class="suggestions__link"
+                                    >
+                                        <svg
+                                            class="suggestions__icon"
+                                            width="16"
+                                            height="16"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-search"
+                                            ></use>
+                                        </svg>
+
+                                        Maxvi K16
+                                    </a>
+                                </li>
+
+                                <li class="suggestions__item">
+                                    <a
+                                        href="product.html"
+                                        class="suggestions__link"
+                                    >
+                                        <svg
+                                            class="suggestions__icon"
+                                            width="16"
+                                            height="16"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-search"
+                                            ></use>
+                                        </svg>
+
+                                        АЗУ Maxvi CCM-211MSC
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <a
+                    href="https://maxvi.ru/"
+                    class="header__glabal header-global"
+                >
+                    MAXVI.RU
+                    <br />
+                    <small>Перейти на сайт</small>
+                </a>
+
+                <div class="header__contacts header-contacts">
+                    <ul class="header__social social">
+                        <li>
+                            <a href="/" class="social__link" target="_blank">
+                                <svg
+                                    class="social__icon"
+                                    width="42"
+                                    height="42"
+                                >
+                                    <use
+                                        xlink:href="images/icons/sprite.svg#icon-vk"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container container--lg">
+                <div class="layout layout-with-aside">
+                    <div>
+                        <button
+                            type="button"
+                            id="nav-switcher"
+                            aria-expanded="false"
+                            aria-controls="nav"
+                            class="nav-switcher button button--primary"
+                        >
+                            <svg
+                                class="nav-switcher__icon"
+                                width="16"
+                                height="16"
+                            >
+                                <use
+                                    xlink:href="images/icons/sprite.svg#icon-catalog"
+                                ></use>
+                            </svg>
+
+                            Каталог
+                        </button>
+
+                        <nav id="nav" aria-hidden="true" class="nav">
+                            <button
+                                type="button"
+                                id="nav-close"
+                                class="nav__close"
+                                aria-label="Закрыть меню"
+                            >
+                                <svg width="32" height="32">
+                                    <use
+                                        xlink:href="images/icons/sprite.svg#icon-close"
+                                    ></use>
+                                </svg>
+                            </button>
+
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <button
+                                        type="button"
+                                        class="nav__toggle nav-toggle"
+                                        aria-expanded="true"
+                                        aria-controls="nav-tab-catalog"
+                                    >
+                                        <svg
+                                            class="nav-toggle__icon"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-catalog"
+                                            ></use>
+                                        </svg>
+
+                                        Каталог
+
+                                        <svg
+                                            class="nav-toggle__arrow"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+                                    </button>
+
+                                    <ul
+                                        id="nav-tab-catalog"
+                                        class="nav__sublist"
+                                        aria-hidden="false"
+                                    >
+                                        <li class="nav__item">
+                                            <button
+                                                type="button"
+                                                class="nav__toggle nav-toggle nav-toggle--secondary"
+                                                aria-expanded="true"
+                                                aria-controls="nav-tab-phone"
+                                            >
+                                                <svg
+                                                    class="nav-toggle__arrow"
+                                                    width="12"
+                                                    height="12"
+                                                >
+                                                    <use
+                                                        xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                                    ></use>
+                                                </svg>
+
+                                                Мобильные телефоны
+                                            </button>
+
+                                            <ul
+                                                id="nav-tab-phone"
+                                                class="nav__sublist"
+                                                aria-hidden="false"
+                                            >
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        B - серия
+                                                    </a>
+
+                                                    <span
+                                                        class="nav__hint nav-hint"
+                                                    >
+                                                        <span
+                                                            class="nav-hint__text"
+                                                        >
+                                                            В этой серии
+                                                            подобраны аппараты в
+                                                            самом доступном для
+                                                            потребителей ценовом
+                                                            сегменте. Сочетание
+                                                            качества,
+                                                            демократичной цены,
+                                                            разнообразие моделей
+                                                            и удобный интерфейс
+                                                            несомненно обрадует
+                                                            широкий круг
+                                                            потребителей
+                                                        </span>
+                                                    </span>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        C - серия
+                                                    </a>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        E - серия
+                                                    </a>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        K - серия
+                                                    </a>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        P - серия
+                                                    </a>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        R - серия
+                                                    </a>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        RT - серия
+                                                    </a>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        T - серия
+                                                    </a>
+                                                </li>
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        X - серия
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav__item">
+                                            <button
+                                                type="button"
+                                                class="nav__toggle nav-toggle nav-toggle--secondary"
+                                                aria-expanded="false"
+                                                aria-controls="nav-tab-tablet"
+                                            >
+                                                <svg
+                                                    class="nav-toggle__arrow"
+                                                    width="12"
+                                                    height="12"
+                                                >
+                                                    <use
+                                                        xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                                    ></use>
+                                                </svg>
+
+                                                Планшеты
+                                            </button>
+
+                                            <ul
+                                                id="nav-tab-tablet"
+                                                class="nav__sublist"
+                                                aria-hidden="true"
+                                            >
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Планшеты для рисования
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav__item">
+                                            <button
+                                                type="button"
+                                                class="nav__toggle nav-toggle nav-toggle--secondary"
+                                                aria-expanded="false"
+                                                aria-controls="nav-tab-accessories"
+                                            >
+                                                <svg
+                                                    class="nav-toggle__arrow"
+                                                    width="12"
+                                                    height="12"
+                                                >
+                                                    <use
+                                                        xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                                    ></use>
+                                                </svg>
+
+                                                Аксессуары
+                                            </button>
+
+                                            <ul
+                                                id="nav-tab-accessories"
+                                                class="nav__sublist"
+                                                aria-hidden="true"
+                                            >
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Автомобильные ЗУ
+                                                    </a>
+                                                </li>
+
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Сетевые ЗУ
+                                                    </a>
+                                                </li>
+
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Беспроводные ЗУ
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav__item">
+                                            <button
+                                                type="button"
+                                                class="nav__toggle nav-toggle nav-toggle--secondary"
+                                                aria-expanded="false"
+                                                aria-controls="nav-tab-household"
+                                            >
+                                                <svg
+                                                    class="nav-toggle__arrow"
+                                                    width="12"
+                                                    height="12"
+                                                >
+                                                    <use
+                                                        xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                                    ></use>
+                                                </svg>
+
+                                                Бытовая техника
+                                            </button>
+
+                                            <ul
+                                                id="nav-tab-household"
+                                                class="nav__sublist"
+                                                aria-hidden="true"
+                                            >
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Ручные блендеры
+                                                    </a>
+                                                </li>
+
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Соковыжималки
+                                                    </a>
+                                                </li>
+
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Тостеры
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav__item">
+                                            <button
+                                                type="button"
+                                                class="nav__toggle nav-toggle nav-toggle--secondary"
+                                                aria-expanded="false"
+                                                aria-controls="nav-tab-computer-accessories"
+                                            >
+                                                <svg
+                                                    class="nav-toggle__arrow"
+                                                    width="12"
+                                                    height="12"
+                                                >
+                                                    <use
+                                                        xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                                    ></use>
+                                                </svg>
+
+                                                Компьютерная переферия
+                                            </button>
+
+                                            <ul
+                                                id="nav-tab-computer-accessories"
+                                                class="nav__sublist"
+                                                aria-hidden="true"
+                                            >
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Ручные блендеры
+                                                    </a>
+                                                </li>
+
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Соковыжималки
+                                                    </a>
+                                                </li>
+
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Тостеры
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav__item">
+                                            <button
+                                                type="button"
+                                                class="nav__toggle nav-toggle nav-toggle--secondary"
+                                                aria-expanded="false"
+                                                aria-controls="nav-tab-portable-electronics"
+                                            >
+                                                <svg
+                                                    class="nav-toggle__arrow"
+                                                    width="12"
+                                                    height="12"
+                                                >
+                                                    <use
+                                                        xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                                    ></use>
+                                                </svg>
+
+                                                Портативная электроника
+                                            </button>
+
+                                            <ul
+                                                id="nav-tab-portable-electronics"
+                                                class="nav__sublist"
+                                                aria-hidden="true"
+                                            >
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Ручные блендеры
+                                                    </a>
+                                                </li>
+
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Соковыжималки
+                                                    </a>
+                                                </li>
+
+                                                <li class="nav__item">
+                                                    <a
+                                                        href="series-c.html"
+                                                        class="nav__link"
+                                                    >
+                                                        Тостеры
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav__item">
+                                    <a href="/" class="nav__toggle nav-toggle">
+                                        <svg
+                                            class="nav-toggle__icon"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-recommendation"
+                                            ></use>
+                                        </svg>
+                                        Рекомендации
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/" class="nav__toggle nav-toggle">
+                                        <svg
+                                            class="nav-toggle__icon"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-arrivals"
+                                            ></use>
+                                        </svg>
+                                        Новинки
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/" class="nav__toggle nav-toggle">
+                                        <svg
+                                            class="nav-toggle__icon"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-rating"
+                                            ></use>
+                                        </svg>
+                                        Топ-просмотров
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div>
+                        <nav class="breadcrumbs">
+                            <ol class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a
+                                        href="index.html"
+                                        class="breadcrumbs__link"
+                                        aria-label="Главная"
+                                    >
+                                        <svg
+                                            class="breadcrumbs__icon"
+                                            width="24"
+                                            height="24"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-home"
+                                            ></use>
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li class="breadcrumbs__item">
+                                    <a
+                                        href="series-c.html"
+                                        class="breadcrumbs__link"
+                                    >
+                                        Мобильные телефоны
+                                    </a>
+                                </li>
+
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link">С-серия</a>
+                                </li>
+                            </ol>
+                        </nav>
+
+                        <section class="section-callout">
+                            <p>
+                                В этой серии подобраны аппараты в самом
+                                доступном для потребителей ценовом сегменте.
+                                Сочетание качества, демократичной цены,
+                                разнообразие моделей и удобный интерфейс
+                                несомненно обрадует широкий круг потребителей
+                            </p>
+                        </section>
+
+                        <section class="section-videos">
+                            <div class="section-videos__grid">
+                                <div class="card-video">
+                                    <a
+                                        class="card-video__placeholder"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modal-video"
+                                        data-video-url="uploads/videos/maxvi-E10.mp4"
+                                        data-video-poster="uploads/videos/maxvi-E10-poster.jpeg"
+                                        data-video-download-url="uploads/videos/maxvi-E10.mp4"
+                                        aria-label="Просмотреть видео"
+                                    >
+                                        <img
+                                            loading="lazy"
+                                            src="uploads/videos/video-item-01.jpeg"
+                                            class="card-video__image"
+                                            width=""
+                                            height=""
+                                            alt="Ручной блендер MAXVI HB621S"
+                                        />
+
+                                        <svg class="card-video__play">
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-play"
+                                            ></use>
+                                        </svg>
+                                    </a>
+
+                                    <a
+                                        href="product.html"
+                                        class="card-video__title"
+                                    >
+                                        Ручной блендер MAXVI HB621S
+                                    </a>
+                                </div>
+
+                                <div class="card-video">
+                                    <a
+                                        class="card-video__placeholder"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modal-video"
+                                        data-video-url="uploads/videos/maxvi-PS-04.mp4"
+                                        data-video-poster="uploads/videos/maxvi-PS-04-poster.jpeg"
+                                        data-video-download-url="uploads/videos/maxvi-PS-04.mp4"
+                                        aria-label="Просмотреть видео"
+                                    >
+                                        <img
+                                            loading="lazy"
+                                            src="uploads/videos/video-item-02.jpeg"
+                                            class="card-video__image"
+                                            width=""
+                                            height=""
+                                            alt="Портативный радиоприёмник Maxvi PR-03"
+                                        />
+
+                                        <svg class="card-video__play">
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-play"
+                                            ></use>
+                                        </svg>
+                                    </a>
+
+                                    <a
+                                        href="product.html"
+                                        class="card-video__title"
+                                    >
+                                        Портативный радиоприёмник Maxvi PR-03
+                                    </a>
+                                </div>
+
+                                <div class="card-video">
+                                    <a
+                                        class="card-video__placeholder"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modal-video"
+                                        data-video-url="uploads/videos/maxvi-PS-04.mp4"
+                                        data-video-poster="uploads/videos/maxvi-PS-04-poster.jpeg"
+                                        data-video-download-url="uploads/videos/maxvi-PS-04.mp4"
+                                        aria-label="Просмотреть видео"
+                                    >
+                                        <img
+                                            loading="lazy"
+                                            src="uploads/videos/video-item-02.jpeg"
+                                            class="card-video__image"
+                                            width=""
+                                            height=""
+                                            alt="Дата-кабель Maxvi MC-A02 Plus"
+                                        />
+
+                                        <svg class="card-video__play">
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-play"
+                                            ></use>
+                                        </svg>
+                                    </a>
+
+                                    <a
+                                        href="product.html"
+                                        class="card-video__title"
+                                    >
+                                        Дата-кабель Maxvi MC-A02 Plus
+                                    </a>
+                                </div>
+
+                                <div class="card-video">
+                                    <a
+                                        class="card-video__placeholder"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modal-video"
+                                        data-video-url="uploads/videos/maxvi-E10.mp4"
+                                        data-video-poster="uploads/videos/maxvi-E10-poster.jpeg"
+                                        data-video-download-url="uploads/videos/maxvi-E10.mp4"
+                                        aria-label="Просмотреть видео"
+                                    >
+                                        <img
+                                            loading="lazy"
+                                            src="uploads/videos/video-item-01.jpeg"
+                                            class="card-video__image"
+                                            width=""
+                                            height=""
+                                            alt="Ручной блендер MAXVI HB621S"
+                                        />
+
+                                        <svg class="card-video__play">
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-play"
+                                            ></use>
+                                        </svg>
+                                    </a>
+
+                                    <a
+                                        href="product.html"
+                                        class="card-video__title"
+                                    >
+                                        Ручной блендер MAXVI HB621S
+                                    </a>
+                                </div>
+
+                                <div class="card-video">
+                                    <a
+                                        class="card-video__placeholder"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modal-video"
+                                        data-video-url="uploads/videos/maxvi-PS-04.mp4"
+                                        data-video-poster="uploads/videos/maxvi-PS-04-poster.jpeg"
+                                        data-video-download-url="uploads/videos/maxvi-PS-04.mp4"
+                                        aria-label="Просмотреть видео"
+                                    >
+                                        <img
+                                            loading="lazy"
+                                            src="uploads/videos/video-item-02.jpeg"
+                                            class="card-video__image"
+                                            width=""
+                                            height=""
+                                            alt="Портативный радиоприёмник Maxvi PR-03"
+                                        />
+
+                                        <svg class="card-video__play">
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-play"
+                                            ></use>
+                                        </svg>
+                                    </a>
+
+                                    <a
+                                        href="product.html"
+                                        class="card-video__title"
+                                    >
+                                        Портативный радиоприёмник Maxvi PR-03
+                                    </a>
+                                </div>
+
+                                <div class="card-video">
+                                    <a
+                                        class="card-video__placeholder"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modal-video"
+                                        data-video-url="uploads/videos/maxvi-PS-04.mp4"
+                                        data-video-poster="uploads/videos/maxvi-PS-04-poster.jpeg"
+                                        data-video-download-url="uploads/videos/maxvi-PS-04.mp4"
+                                        aria-label="Просмотреть видео"
+                                    >
+                                        <img
+                                            loading="lazy"
+                                            src="uploads/videos/video-item-02.jpeg"
+                                            class="card-video__image"
+                                            width=""
+                                            height=""
+                                            alt="Дата-кабель Maxvi MC-A02 Plus"
+                                        />
+
+                                        <svg class="card-video__play">
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-play"
+                                            ></use>
+                                        </svg>
+                                    </a>
+
+                                    <a
+                                        href="product.html"
+                                        class="card-video__title"
+                                    >
+                                        Дата-кабель Maxvi MC-A02 Plus
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__layout">
+                    <div class="footer__column">
+                        <div class="footer__block">
+                            <h2 class="footer__title">Продукция</h2>
+
+                            <ul class="footer__nav">
+                                <li>
+                                    <a href="/">Мобильные телефоны</a>
+                                </li>
+                                <li>
+                                    <a href="/">Планшеты</a>
+                                </li>
+                                <li>
+                                    <a href="/">Аксессуары</a>
+                                </li>
+                                <li>
+                                    <a href="/">Бытовая техника</a>
+                                </li>
+                                <li>
+                                    <a href="/">Компьютерная периферия</a>
+                                </li>
+                                <li>
+                                    <a href="/">Портативная электроника</a>
+                                </li>
+                                <li>
+                                    <a href="/">Смартфоны</a>
+                                </li>
+                                <li>
+                                    <a href="/">Телефоны для дома и офиса</a>
+                                </li>
+                                <li>
+                                    <a href="/">Архив товаров</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__column">
+                        <div class="footer__block">
+                            <h2 class="footer__title">Партнерам</h2>
+
+                            <ul class="footer__nav">
+                                <li>
+                                    <a href="/">Где купить</a>
+                                </li>
+                                <li>
+                                    <a href="/">Инструкции и ПО</a>
+                                </li>
+                                <li>
+                                    <a href="/">
+                                        Авторизированные сервисные центры
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/">Личный кабинет АСЦ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__column">
+                        <div class="footer__block">
+                            <ul class="footer__social social">
+                                <li>
+                                    <a
+                                        href="/"
+                                        class="social__link"
+                                        target="_blank"
+                                    >
+                                        <svg
+                                            class="social__icon"
+                                            width="42"
+                                            height="42"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-vk"
+                                            ></use>
+                                        </svg>
+
+                                        Страница ВКонтакте
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="/"
+                                        class="social__link"
+                                        target="_blank"
+                                    >
+                                        <svg
+                                            class="social__icon"
+                                            width="42"
+                                            height="42"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-email"
+                                            ></use>
+                                        </svg>
+
+                                        info@maxvi.ru
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="footer__copyright">
+                    &copy;&nbsp;2013-2023 MAXVI. Все права защищены.
+                </p>
+            </div>
+        </footer>
+
+        <!-- Offcanvas -->
+        <div id="offcanvas" aria-hidden="true" tabindex="0" class="offcanvas">
+            <div class="offcanvas__content">
+                <nav class="offcanvas__nav offcanvas-nav">
+                    <ul class="offcanvas-nav__list">
+                        <li>
+                            <a href="https://maxvi.ru/" target="_blank">
+                                Перейти на сайт MAXVI.RU
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <ul class="offcanvas__social offcanvas-social social">
+                    <li>
+                        <a href="/" class="social__link" target="_blank">
+                            <svg class="social__icon" width="42" height="42">
+                                <use
+                                    xlink:href="images/icons/sprite.svg#icon-vk"
+                                ></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="modal-video"
+            tabindex="-1"
+            aria-labelledby="modal-video-label"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button
+                            type="button"
+                            class="modal-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Закрыть окно просмотра"
+                        >
+                            <svg
+                                class="modal-close__icon"
+                                width="32"
+                                height="32"
+                            >
+                                <use
+                                    xlink:href="images/icons/sprite.svg#icon-close"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="player"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+#front
+/node_modules
+/front/node_modules
+
+# Build
+/www/f/dist/
+
+# Thumbnails
+._*
+
+# System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# Idea
+.idea
+
+*.pyc
+*.orig
+*.iml
+*.ipr
+*.iws
+*.csv
+
+# Bitrix
+/www/api/i18n
+/www/api/v1/menu.json
+/www/bitrix
+/www/vendor
+/www/temp/*
+/www/upload
+/www/local/__test/*
+/www/local/__log
+/www/import/*
+/www/*test.php

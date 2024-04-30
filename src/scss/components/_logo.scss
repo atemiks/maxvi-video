@@ -1,0 +1,19 @@
+.logo {
+    display: block;
+
+    &__image {}
+
+    &__image--mobile {
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+
+    &__image--desktop {
+        display: none;
+
+        @include breakpoint(md) {
+            display: block;
+        }
+    }
+}

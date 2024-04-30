@@ -1,0 +1,138 @@
+.product {
+    margin-top: 1.25rem;
+
+    @include breakpoint(lg) {
+        margin-top: 2rem;
+    }
+
+    &__layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+
+        @include breakpoint(md) {
+            grid-template-columns: 3fr 2fr;
+        }
+
+        @include breakpoint(lg) {
+            grid-template-columns: 5.5fr 3.5fr 2.5fr;
+            column-gap: 2rem;
+        }
+
+        @include breakpoint(2xl) {
+            column-gap: 4.625rem;
+        }
+    }
+
+    &__figure {
+        grid-column: 1 / -1;
+        margin: 0;
+
+        @include breakpoint(lg) {
+            order: -1;
+        }
+    }
+
+    &__header {
+        grid-column: 1 / -1;
+
+        @include breakpoint(lg) {
+            grid-column: span 1;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1.375rem;
+
+        @include breakpoint(lg) {
+            font-size: 1.625rem;
+        }
+    }
+
+    &__description {
+        margin: 0;
+    }
+
+    &__actions {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        >li {
+            position: relative;
+
+            &:not(:first-child) {
+                border-top: 1px solid $color-border-gray;
+            }
+
+            &:hover {
+                ul {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        ul {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(4px);
+            transition: transform 300ms ease;
+        }
+    }
+
+    &-action {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        column-gap: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        color: currentColor;
+        text-decoration: none;
+
+        @include breakpoint(lg) {
+            column-gap: 0.75rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
+        &:hover {
+            color: $color-title;
+        }
+
+        &__icon {
+            color: $color-primary;
+        }
+    }
+
+    &-partners {
+        position: absolute;
+        z-index: 10;
+        top: 100%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.875rem 1.125rem;
+        width: 100%;
+        margin: 0;
+        padding: 0.875rem;
+        border: 1px solid $color-border-gray;
+        border-radius: 0 0 8px 8px;
+        background: $color-white;
+        box-shadow: 0 4px 10px rgba($color: $color-black, $alpha: 0.07);
+        list-style: none;
+
+        &__link,
+        &__logo {
+            display: block;
+        }
+
+        &__logo {
+            max-width: 4.375rem;
+        }
+    }
+}
