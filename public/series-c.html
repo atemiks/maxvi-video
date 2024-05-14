@@ -251,41 +251,8 @@
         <main class="main">
             <div class="container container--lg">
                 <div class="layout layout-with-aside">
-                    <div>
-                        <button
-                            type="button"
-                            id="nav-switcher"
-                            aria-expanded="false"
-                            aria-controls="nav"
-                            class="nav-switcher button button--primary"
-                        >
-                            <svg
-                                class="nav-switcher__icon"
-                                width="16"
-                                height="16"
-                            >
-                                <use
-                                    xlink:href="images/icons/sprite.svg#icon-catalog"
-                                ></use>
-                            </svg>
-
-                            Каталог
-                        </button>
-
-                        <nav id="nav" aria-hidden="true" class="nav">
-                            <button
-                                type="button"
-                                id="nav-close"
-                                class="nav__close"
-                                aria-label="Закрыть меню"
-                            >
-                                <svg width="32" height="32">
-                                    <use
-                                        xlink:href="images/icons/sprite.svg#icon-close"
-                                    ></use>
-                                </svg>
-                            </button>
-
+                    <div class="layout__aside">
+                        <nav class="nav">
                             <ul class="nav__list">
                                 <li class="nav__item">
                                     <button
@@ -743,7 +710,7 @@
                         </nav>
                     </div>
 
-                    <div>
+                    <div class="layout__content">
                         <nav class="breadcrumbs">
                             <ol class="breadcrumbs__list">
                                 <li class="breadcrumbs__item">
@@ -793,13 +760,8 @@
                             <div class="section-videos__grid">
                                 <div class="card-video">
                                     <a
+                                        href="product.html"
                                         class="card-video__placeholder"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#modal-video"
-                                        data-video-url="uploads/videos/maxvi-E10.mp4"
-                                        data-video-poster="uploads/videos/maxvi-E10-poster.jpeg"
-                                        data-video-download-url="uploads/videos/maxvi-E10.mp4"
-                                        aria-label="Просмотреть видео"
                                     >
                                         <img
                                             loading="lazy"
@@ -827,13 +789,8 @@
 
                                 <div class="card-video">
                                     <a
+                                        href="product.html"
                                         class="card-video__placeholder"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#modal-video"
-                                        data-video-url="uploads/videos/maxvi-PS-04.mp4"
-                                        data-video-poster="uploads/videos/maxvi-PS-04-poster.jpeg"
-                                        data-video-download-url="uploads/videos/maxvi-PS-04.mp4"
-                                        aria-label="Просмотреть видео"
                                     >
                                         <img
                                             loading="lazy"
@@ -861,13 +818,8 @@
 
                                 <div class="card-video">
                                     <a
+                                        href="product.html"
                                         class="card-video__placeholder"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#modal-video"
-                                        data-video-url="uploads/videos/maxvi-PS-04.mp4"
-                                        data-video-poster="uploads/videos/maxvi-PS-04-poster.jpeg"
-                                        data-video-download-url="uploads/videos/maxvi-PS-04.mp4"
-                                        aria-label="Просмотреть видео"
                                     >
                                         <img
                                             loading="lazy"
@@ -895,13 +847,8 @@
 
                                 <div class="card-video">
                                     <a
+                                        href="product.html"
                                         class="card-video__placeholder"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#modal-video"
-                                        data-video-url="uploads/videos/maxvi-E10.mp4"
-                                        data-video-poster="uploads/videos/maxvi-E10-poster.jpeg"
-                                        data-video-download-url="uploads/videos/maxvi-E10.mp4"
-                                        aria-label="Просмотреть видео"
                                     >
                                         <img
                                             loading="lazy"
@@ -929,13 +876,8 @@
 
                                 <div class="card-video">
                                     <a
+                                        href="product.html"
                                         class="card-video__placeholder"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#modal-video"
-                                        data-video-url="uploads/videos/maxvi-PS-04.mp4"
-                                        data-video-poster="uploads/videos/maxvi-PS-04-poster.jpeg"
-                                        data-video-download-url="uploads/videos/maxvi-PS-04.mp4"
-                                        aria-label="Просмотреть видео"
                                     >
                                         <img
                                             loading="lazy"
@@ -963,13 +905,8 @@
 
                                 <div class="card-video">
                                     <a
+                                        href="product.html"
                                         class="card-video__placeholder"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#modal-video"
-                                        data-video-url="uploads/videos/maxvi-PS-04.mp4"
-                                        data-video-poster="uploads/videos/maxvi-PS-04-poster.jpeg"
-                                        data-video-download-url="uploads/videos/maxvi-PS-04.mp4"
-                                        aria-label="Просмотреть видео"
                                     >
                                         <img
                                             loading="lazy"
@@ -1121,8 +1058,469 @@
             <div class="offcanvas__content">
                 <nav class="offcanvas__nav offcanvas-nav">
                     <ul class="offcanvas-nav__list">
-                        <li>
-                            <a href="https://maxvi.ru/" target="_blank">
+                        <li class="offcanvas-nav__item">
+                            <button
+                                type="button"
+                                class="offcanvas-nav__toggle nav-toggle nav-toggle--white"
+                                aria-expanded="true"
+                                aria-controls="offcanvas-tab-catalog"
+                            >
+                                <svg
+                                    class="nav-toggle__icon"
+                                    width="12"
+                                    height="12"
+                                >
+                                    <use
+                                        xlink:href="images/icons/sprite.svg#icon-catalog"
+                                    ></use>
+                                </svg>
+
+                                Каталог
+
+                                <svg
+                                    class="nav-toggle__arrow"
+                                    width="12"
+                                    height="12"
+                                >
+                                    <use
+                                        xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                    ></use>
+                                </svg>
+                            </button>
+
+                            <ul
+                                id="offcanvas-tab-catalog"
+                                class="offcanvas-nav__sublist"
+                                aria-hidden="false"
+                            >
+                                <li class="offcanvas-nav__item">
+                                    <button
+                                        type="button"
+                                        class="offcanvas-nav__toggle nav-toggle nav-toggle--white"
+                                        aria-expanded="true"
+                                        aria-controls="offcanvas-tab-phone"
+                                    >
+                                        <svg
+                                            class="nav-toggle__arrow"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+
+                                        Мобильные телефоны
+                                    </button>
+
+                                    <ul
+                                        id="offcanvas-tab-phone"
+                                        class="offcanvas-nav__sublist"
+                                        aria-hidden="false"
+                                    >
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                B - серия
+                                            </a>
+
+                                            <span class="nav__hint nav-hint">
+                                                <span class="nav-hint__text">
+                                                    В этой серии подобраны
+                                                    аппараты в самом доступном
+                                                    для потребителей ценовом
+                                                    сегменте. Сочетание
+                                                    качества, демократичной
+                                                    цены, разнообразие моделей и
+                                                    удобный интерфейс несомненно
+                                                    обрадует широкий круг
+                                                    потребителей
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                C - серия
+                                            </a>
+                                        </li>
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                E - серия
+                                            </a>
+                                        </li>
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                K - серия
+                                            </a>
+                                        </li>
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                P - серия
+                                            </a>
+                                        </li>
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                R - серия
+                                            </a>
+                                        </li>
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                RT - серия
+                                            </a>
+                                        </li>
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                T - серия
+                                            </a>
+                                        </li>
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                X - серия
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="offcanvas-nav__item">
+                                    <button
+                                        type="button"
+                                        class="offcanvas-nav__toggle nav-toggle nav-toggle--white"
+                                        aria-expanded="false"
+                                        aria-controls="offcanvas-tab-tablet"
+                                    >
+                                        <svg
+                                            class="nav-toggle__arrow"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+
+                                        Планшеты
+                                    </button>
+
+                                    <ul
+                                        id="offcanvas-tab-tablet"
+                                        class="offcanvas-nav__sublist"
+                                        aria-hidden="true"
+                                    >
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Планшеты для рисования
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="offcanvas-nav__item">
+                                    <button
+                                        type="button"
+                                        class="offcanvas-nav__toggle nav-toggle nav-toggle--white"
+                                        aria-expanded="false"
+                                        aria-controls="offcanvas-tab-accessories"
+                                    >
+                                        <svg
+                                            class="nav-toggle__arrow"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+
+                                        Аксессуары
+                                    </button>
+
+                                    <ul
+                                        id="offcanvas-tab-accessories"
+                                        class="offcanvas-nav__sublist"
+                                        aria-hidden="true"
+                                    >
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Автомобильные ЗУ
+                                            </a>
+                                        </li>
+
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Сетевые ЗУ
+                                            </a>
+                                        </li>
+
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Беспроводные ЗУ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="offcanvas-nav__item">
+                                    <button
+                                        type="button"
+                                        class="offcanvas-nav__toggle nav-toggle nav-toggle--white"
+                                        aria-expanded="false"
+                                        aria-controls="offcanvas-tab-household"
+                                    >
+                                        <svg
+                                            class="nav-toggle__arrow"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+
+                                        Бытовая техника
+                                    </button>
+
+                                    <ul
+                                        id="offcanvas-tab-household"
+                                        class="offcanvas-nav__sublist"
+                                        aria-hidden="true"
+                                    >
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Ручные блендеры
+                                            </a>
+                                        </li>
+
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Соковыжималки
+                                            </a>
+                                        </li>
+
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Тостеры
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="offcanvas-nav__item">
+                                    <button
+                                        type="button"
+                                        class="offcanvas-nav__toggle nav-toggle nav-toggle--white"
+                                        aria-expanded="false"
+                                        aria-controls="offcanvas-tab-computer-accessories"
+                                    >
+                                        <svg
+                                            class="nav-toggle__arrow"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+
+                                        Компьютерная переферия
+                                    </button>
+
+                                    <ul
+                                        id="offcanvas-tab-computer-accessories"
+                                        class="offcanvas-nav__sublist"
+                                        aria-hidden="true"
+                                    >
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Ручные блендеры
+                                            </a>
+                                        </li>
+
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Соковыжималки
+                                            </a>
+                                        </li>
+
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Тостеры
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="offcanvas-nav__item">
+                                    <button
+                                        type="button"
+                                        class="offcanvas-nav__toggle nav-toggle nav-toggle--white"
+                                        aria-expanded="false"
+                                        aria-controls="offcanvas-tab-portable-electronics"
+                                    >
+                                        <svg
+                                            class="nav-toggle__arrow"
+                                            width="12"
+                                            height="12"
+                                        >
+                                            <use
+                                                xlink:href="images/icons/sprite.svg#icon-chevron-right"
+                                            ></use>
+                                        </svg>
+
+                                        Портативная электроника
+                                    </button>
+
+                                    <ul
+                                        id="offcanvas-tab-portable-electronics"
+                                        class="offcanvas-nav__sublist"
+                                        aria-hidden="true"
+                                    >
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Ручные блендеры
+                                            </a>
+                                        </li>
+
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Соковыжималки
+                                            </a>
+                                        </li>
+
+                                        <li class="offcanvas-nav__item">
+                                            <a
+                                                href="series-c.html"
+                                                class="offcanvas-nav__link"
+                                            >
+                                                Тостеры
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="offcanvas-nav__item">
+                            <a
+                                href="/"
+                                class="offcanvas-nav__toggle nav-toggle"
+                            >
+                                <svg
+                                    class="nav-toggle__icon"
+                                    width="12"
+                                    height="12"
+                                >
+                                    <use
+                                        xlink:href="images/icons/sprite.svg#icon-recommendation"
+                                    ></use>
+                                </svg>
+                                Рекомендации
+                            </a>
+                        </li>
+
+                        <li class="offcanvas-nav__item">
+                            <a
+                                href="/"
+                                class="offcanvas-nav__toggle nav-toggle"
+                            >
+                                <svg
+                                    class="nav-toggle__icon"
+                                    width="12"
+                                    height="12"
+                                >
+                                    <use
+                                        xlink:href="images/icons/sprite.svg#icon-arrivals"
+                                    ></use>
+                                </svg>
+                                Новинки
+                            </a>
+                        </li>
+
+                        <li class="offcanvas-nav__item">
+                            <a
+                                href="/"
+                                class="offcanvas-nav__toggle nav-toggle"
+                            >
+                                <svg
+                                    class="nav-toggle__icon"
+                                    width="12"
+                                    height="12"
+                                >
+                                    <use
+                                        xlink:href="images/icons/sprite.svg#icon-rating"
+                                    ></use>
+                                </svg>
+                                Топ-просмотров
+                            </a>
+                        </li>
+
+                        <li class="offcanvas-nav__item">
+                            <a
+                                href="https://maxvi.ru/"
+                                class="offcanvas-nav__link"
+                                target="_blank"
+                            >
                                 Перейти на сайт MAXVI.RU
                             </a>
                         </li>

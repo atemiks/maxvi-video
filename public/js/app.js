@@ -2995,14 +2995,14 @@ var initAnchor = function initAnchor() {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_js_device__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../src/js/device */ "./src/js/device.js");
-/* harmony import */ var _src_js_aria__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../src/js/aria */ "./src/js/aria.js");
-/* harmony import */ var _src_js_anchor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../src/js/anchor */ "./src/js/anchor.js");
-/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../src/js/search */ "./src/js/search.js");
-/* harmony import */ var _src_js_nav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../src/js/nav */ "./src/js/nav.js");
-/* harmony import */ var _src_js_offcanvas__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../src/js/offcanvas */ "./src/js/offcanvas.js");
-/* harmony import */ var _src_js_modals_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../../src/js/modals.js */ "./src/js/modals.js");
-/* harmony import */ var _src_js_videoplayer_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../../src/js/videoplayer.js */ "./src/js/videoplayer.js");
+/* harmony import */ var _src_js_device__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/js/device */ "./src/js/device.js");
+/* harmony import */ var _src_js_aria__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/js/aria */ "./src/js/aria.js");
+/* harmony import */ var _src_js_anchor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../src/js/anchor */ "./src/js/anchor.js");
+/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../src/js/search */ "./src/js/search.js");
+/* harmony import */ var _src_js_nav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../src/js/nav */ "./src/js/nav.js");
+/* harmony import */ var _src_js_offcanvas__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../src/js/offcanvas */ "./src/js/offcanvas.js");
+/* harmony import */ var _src_js_modals_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../src/js/modals.js */ "./src/js/modals.js");
+/* harmony import */ var _src_js_videoplayer_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../src/js/videoplayer.js */ "./src/js/videoplayer.js");
 
 
 
@@ -3136,7 +3136,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
-/* harmony import */ var _src_js_player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../src/js/player */ "./src/js/player.js");
+/* harmony import */ var _src_js_player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/js/player */ "./src/js/player.js");
 
 
 var initModals = function initModals() {
@@ -3209,32 +3209,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var initNav = function initNav() {
-  var nav = document.getElementById('nav');
-  var navSwitcher = document.getElementById('nav-switcher');
-  var navClose = document.getElementById('nav-close');
-  if (!nav || !navSwitcher) {
-    return;
-  }
-  var showNav = function showNav() {
-    nav.setAttribute('aria-hidden', false);
-    navSwitcher.setAttribute('aria-expanded', true);
-  };
-  var hideNav = function hideNav() {
-    nav.setAttribute('aria-hidden', true);
-    navSwitcher.setAttribute('aria-expanded', false);
-  };
-  if (window.device.isLaptop || window.device.isDesktop) {
-    showNav();
-  }
-  window.device.laptopMatchMedia.addEventListener('change', function (event) {
-    event.matches ? showNav() : hideNav();
-  });
-  window.device.desktopMatchMedia.addEventListener('change', function (event) {
-    if (event.matches) {
-      showNav();
-    }
-  });
-  navClose.addEventListener('click', hideNav);
+  // const nav = document.getElementById('nav');
+  // const navSwitcher = document.getElementById('nav-switcher');
+  // const navClose = document.getElementById('nav-close');
+  // if (!nav || !navSwitcher) {
+  //     return;
+  // }
+  // const showNav = () => {
+  //     nav.setAttribute('aria-hidden', false);
+  //     navSwitcher.setAttribute('aria-expanded', true);
+  // };
+  // const hideNav = () => {
+  //     nav.setAttribute('aria-hidden', true);
+  //     navSwitcher.setAttribute('aria-expanded', false);
+  // };
+  // if (window.device.isLaptop || window.device.isDesktop) {
+  //     showNav();
+  // }
+  // window.device.laptopMatchMedia.addEventListener('change', (event) => {
+  //     event.matches ? showNav() : hideNav();
+  // });
+  // window.device.desktopMatchMedia.addEventListener('change', (event) => {
+  //     if (event.matches) {
+  //         showNav();
+  //     }
+  // });
+  // navClose.addEventListener('click', hideNav);
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initNav);
 
@@ -3297,8 +3297,8 @@ var Player = /*#__PURE__*/function () {
       autoPlay = _ref$autoPlay === void 0 ? false : _ref$autoPlay,
       downloadUrl = _ref.downloadUrl;
     _classCallCheck(this, Player);
-    _defineProperty(this, "iconPlay", "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"160\" width=\"160\" viewBox=\"0 -960 960 960\"  fill=\"currentColor\">\n        <path d=\"M320-200v-560l440 280-440 280Z\"/>\n      </svg>");
-    _defineProperty(this, "iconPause", "<svg width=\"90\" height=\"90\" viewBox=\"-1 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"  fill=\"currentColor\">\n            <g transform=\"translate(-67.000000, -3765.000000)\"><g transform=\"translate(56.000000, 160.000000)\">\n                <path d=\"M11,3613 L13,3613 L13,3605 L11,3605 L11,3613 Z M15,3613 L17,3613 L17,3605 L15,3605 L15,3613 Z\" />\n            </g></g>\n        </svg>");
+    _defineProperty(this, "iconPlay", "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"48\" width=\"48\" viewBox=\"0 -960 960 960\"  fill=\"currentColor\">\n        <path d=\"M320-200v-560l440 280-440 280Z\"/>\n      </svg>");
+    _defineProperty(this, "iconPause", "<svg width=\"24\" height=\"24\" viewBox=\"-1 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"  fill=\"currentColor\">\n            <g transform=\"translate(-67.000000, -3765.000000)\"><g transform=\"translate(56.000000, 160.000000)\">\n                <path d=\"M11,3613 L13,3613 L13,3605 L11,3605 L11,3613 Z M15,3613 L17,3613 L17,3605 L15,3605 L15,3613 Z\" />\n            </g></g>\n        </svg>");
     _defineProperty(this, "iconFullscreen", "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\" fill=\"currentColor\">\n        <path d=\"M200-200v-200h80v120h120v80H200Zm0-360v-200h200v80H280v120h-80Zm360 360v-80h120v-120h80v200H560Zm120-360v-120H560v-80h200v200h-80Z\"/>\n      </svg>");
     _defineProperty(this, "iconNoSound", "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\" fill=\"currentColor\" >\n        <path d=\"m616-320-56-56 104-104-104-104 56-56 104 104 104-104 56 56-104 104 104 104-56 56-104-104-104 104Zm-496-40v-240h160l200-200v640L280-360H120Z\"/>\n      </svg>");
     _defineProperty(this, "iconVolumeUp", "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\" fill=\"currentColor\" >\n        <path d=\"M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320Z\"/>\n      </svg>");
@@ -3326,21 +3326,21 @@ var Player = /*#__PURE__*/function () {
     key: "initialize",
     value: function initialize() {
       var playerElement = this.playerElement;
-      this.playerElement.classList.add("initialized");
+      this.playerElement.classList.add('initialized');
       this.playerElement.innerHTML += this.playerTemplate;
-      this.playerVideo = playerElement.querySelector("video");
-      this.playerVideo.classList.add("player__video");
-      this.playerHandle = playerElement.querySelector(".player__handle");
-      this.playerIsland = playerElement.querySelector(".player__island");
-      this.playerCurrentTime = playerElement.querySelector(".player__currentTime");
-      this.playerTotalTime = playerElement.querySelector(".player__duration");
-      this.playerSeekbar = playerElement.querySelector(".player__seekbar");
-      this.playerProgressbar = playerElement.querySelector(".player__progressbar");
-      this.playerVolumeToggle = playerElement.querySelector(".player__volume-toggle");
-      this.playerVolumeBar = playerElement.querySelector(".player__volume-bar");
-      this.playerVolumeRange = playerElement.querySelector(".player__volume-range");
-      this.playerDownload = playerElement.querySelector(".player__download");
-      this.playerFullscreen = playerElement.querySelector(".player__fullscreen");
+      this.playerVideo = playerElement.querySelector('video');
+      this.playerVideo.classList.add('player__video');
+      this.playerHandle = playerElement.querySelector('.player__handle');
+      this.playerIsland = playerElement.querySelector('.player__island');
+      this.playerCurrentTime = playerElement.querySelector('.player__currentTime');
+      this.playerTotalTime = playerElement.querySelector('.player__duration');
+      this.playerSeekbar = playerElement.querySelector('.player__seekbar');
+      this.playerProgressbar = playerElement.querySelector('.player__progressbar');
+      this.playerVolumeToggle = playerElement.querySelector('.player__volume-toggle');
+      this.playerVolumeBar = playerElement.querySelector('.player__volume-bar');
+      this.playerVolumeRange = playerElement.querySelector('.player__volume-range');
+      this.playerDownload = playerElement.querySelector('.player__download');
+      this.playerFullscreen = playerElement.querySelector('.player__fullscreen');
       this.updateTimeInformation(this.playerVideo.currentTime, this.playerVideo.duration);
       this.initializeVideo();
       this.initializeProgressbar();
@@ -3352,70 +3352,70 @@ var Player = /*#__PURE__*/function () {
     key: "initializeVideo",
     value: function initializeVideo() {
       var _this = this;
-      this.playerElement.addEventListener("mousemove", function () {
+      this.playerElement.addEventListener('mousemove', function () {
         if (!_this.playerVideo.paused) {
           _this.showControls();
           _this.hideControlsWithDelay();
         }
       });
-      this.playerElement.addEventListener("touchmove", function () {
+      this.playerElement.addEventListener('touchmove', function () {
         if (!_this.playerVideo.paused) {
           _this.showControls();
           _this.hideControlsWithDelay();
         }
       });
-      this.playerElement.addEventListener("mouseenter", function () {
+      this.playerElement.addEventListener('mouseenter', function () {
         if (!_this.playerVideo.paused) {
           _this.showControls();
         }
       });
-      this.playerElement.addEventListener("mouseleave", function () {
+      this.playerElement.addEventListener('mouseleave', function () {
         if (!_this.playerVideo.paused) {
           _this.hideControls();
         }
       });
-      this.playerVideo.addEventListener("loadedmetadata", function () {
+      this.playerVideo.addEventListener('loadedmetadata', function () {
         _this.initializeDownload();
       });
-      this.playerVideo.addEventListener("play", function () {
+      this.playerVideo.addEventListener('play', function () {
         _this.playerHandle.innerHTML = _this.iconPause;
         _this.hideControlsWithDelay();
       });
-      this.playerVideo.addEventListener("pause", function () {
+      this.playerVideo.addEventListener('pause', function () {
         _this.playerHandle.innerHTML = _this.iconPlay;
         _this.showControls();
       });
-      this.playerVideo.addEventListener("durationchange", function (_ref2) {
+      this.playerVideo.addEventListener('durationchange', function (_ref2) {
         var target = _ref2.target;
         var currentTime = target.currentTime,
           duration = target.duration;
         _this.updateTimeInformation(currentTime, duration);
       });
-      this.playerVideo.addEventListener("timeupdate", function (_ref3) {
+      this.playerVideo.addEventListener('timeupdate', function (_ref3) {
         var target = _ref3.target;
         var currentTime = target.currentTime,
           duration = target.duration;
         _this.updateTimeInformation(currentTime, duration);
       });
-      this.playerVideo.addEventListener("ended", function () {
+      this.playerVideo.addEventListener('ended', function () {
         _this.pauseVideo();
         _this.closeFullscreen();
       });
-      this.playerVideo.addEventListener("volumechange", function () {
+      this.playerVideo.addEventListener('volumechange', function () {
         _this.updateVolumeInformation();
       });
-      this.playerVideo.addEventListener("fullscreenchange", function (event) {
+      this.playerVideo.addEventListener('fullscreenchange', function (event) {
         if (!document.fullscreenElement) {
           _this.closeFullscreen();
         }
       });
 
       // Video controls appear after exiting full screen mode on iOS
-      this.playerVideo.addEventListener("webkitendfullscreen", function () {
+      this.playerVideo.addEventListener('webkitendfullscreen', function () {
         _this.closeFullscreen();
         _this.pauseVideo();
       });
-      this.playerVideo.addEventListener("click", function () {
+      this.playerVideo.addEventListener('click', function () {
         if (_this.playerVideo.paused) {
           _this.unMuteVolume();
           _this.playVideo();
@@ -3428,20 +3428,20 @@ var Player = /*#__PURE__*/function () {
     key: "initializeProgressbar",
     value: function initializeProgressbar() {
       var _this2 = this;
-      this.playerProgressbar.addEventListener("mousedown", function () {
+      this.playerProgressbar.addEventListener('mousedown', function () {
         _this2.pauseVideo();
-        console.log("mousedown");
+        console.log('mousedown');
       });
-      this.playerProgressbar.addEventListener("mouseup", function () {
+      this.playerProgressbar.addEventListener('mouseup', function () {
         _this2.playVideo();
       });
-      this.playerProgressbar.addEventListener("touchstart", function () {
+      this.playerProgressbar.addEventListener('touchstart', function () {
         _this2.pauseVideo();
       });
-      this.playerProgressbar.addEventListener("touchend", function () {
+      this.playerProgressbar.addEventListener('touchend', function () {
         _this2.playVideo();
       });
-      this.playerProgressbar.addEventListener("input", function () {
+      this.playerProgressbar.addEventListener('input', function () {
         var _this2$playerProgress = _this2.playerProgressbar,
           value = _this2$playerProgress.value,
           max = _this2$playerProgress.max;
@@ -3454,16 +3454,16 @@ var Player = /*#__PURE__*/function () {
     value: function initializeVolume() {
       var _this3 = this;
       if (this.isIOS()) {
-        this.playerVolumeBar.style.display = "none ";
+        this.playerVolumeBar.style.display = 'none ';
       }
-      this.playerVolumeToggle.addEventListener("click", function () {
+      this.playerVolumeToggle.addEventListener('click', function () {
         if (_this3.playerVideo.muted) {
           _this3.unMuteVolume();
           return;
         }
         _this3.muteVolume();
       });
-      this.playerVolumeRange.addEventListener("input", function (_ref4) {
+      this.playerVolumeRange.addEventListener('input', function (_ref4) {
         var target = _ref4.target;
         var value = target.value;
         _this3.playerVideo.muted = false;
@@ -3484,7 +3484,7 @@ var Player = /*#__PURE__*/function () {
             _this4.pauseVideo();
           });
         }, {
-          rootMargin: "-25% 0px -25% 0px"
+          rootMargin: '-25% 0px -25% 0px'
         });
         presentationObserver.observe(this.playerElement);
       }
@@ -3492,14 +3492,14 @@ var Player = /*#__PURE__*/function () {
   }, {
     key: "initializeDownload",
     value: function initializeDownload() {
-      this.playerDownload.style.display = "block";
+      this.playerDownload.style.display = 'block';
       this.playerDownload.href = this.downloadUrl || this.playerVideo.currentSrc;
     }
   }, {
     key: "initializeFullscreen",
     value: function initializeFullscreen() {
       var _this5 = this;
-      this.playerFullscreen.addEventListener("click", function () {
+      this.playerFullscreen.addEventListener('click', function () {
         _this5.openFullscreen();
       });
     }
@@ -3511,14 +3511,14 @@ var Player = /*#__PURE__*/function () {
       }
       var minutes = Math.floor(Number(totalSeconds) / 60);
       var seconds = Math.round(Number(totalSeconds) % 60);
-      var formattedSeconds = String(seconds).padStart(2, "0");
+      var formattedSeconds = String(seconds).padStart(2, '0');
       return "".concat(minutes, ":").concat(formattedSeconds);
     }
   }, {
     key: "updateProgressbarProgress",
     value: function updateProgressbarProgress(target, currentValue, maxValue) {
       var progress = currentValue / maxValue * 100;
-      target.style.setProperty("--player-progressbar-complete", "".concat(progress, "%"));
+      target.style.setProperty('--player-progressbar-complete', "".concat(progress, "%"));
     }
   }, {
     key: "updateTimeInformation",
@@ -3548,7 +3548,7 @@ var Player = /*#__PURE__*/function () {
     key: "pauseVideo",
     value: function pauseVideo() {
       this.playerVideo.pause();
-      console.log("pause");
+      console.log('pause');
     }
   }, {
     key: "autoPlayVideo",
@@ -3572,19 +3572,19 @@ var Player = /*#__PURE__*/function () {
     key: "showControls",
     value: function showControls() {
       this.playerHandle.style.opacity = 1;
-      this.playerHandle.style.visibility = "visible";
+      this.playerHandle.style.visibility = 'visible';
       this.playerIsland.style.opacity = 1;
-      this.playerIsland.style.visibility = "visible";
-      this.playerIsland.style.transform = "translateY(0)";
+      this.playerIsland.style.visibility = 'visible';
+      this.playerIsland.style.transform = 'translateY(0)';
     }
   }, {
     key: "hideControls",
     value: function hideControls() {
       this.playerHandle.style.opacity = 0;
-      this.playerHandle.style.visibility = "hidden";
+      this.playerHandle.style.visibility = 'hidden';
       this.playerIsland.style.opacity = 0;
-      this.playerIsland.style.visibility = "hidden";
-      this.playerIsland.style.transform = "translateY(10px)";
+      this.playerIsland.style.visibility = 'hidden';
+      this.playerIsland.style.transform = 'translateY(10px)';
     }
   }, {
     key: "hideControlsWithDelay",
@@ -3622,15 +3622,15 @@ var Player = /*#__PURE__*/function () {
       } else if (this.playerVideo.webkitExitFullscreen) {
         this.playerVideo.webkitExitFullscreen();
       }
-      var exitFullscreenEvent = new Event("exitFullscreen");
+      var exitFullscreenEvent = new Event('exitFullscreen');
       this.playerElement.dispatchEvent(exitFullscreenEvent);
     }
   }, {
     key: "isIOS",
     value: function isIOS() {
-      return ["iPad Simulator", "iPhone Simulator", "iPod Simulator", "iPad", "iPhone", "iPod"].includes(navigator.platform) ||
+      return ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform) ||
       // iPad on iOS 13 detection
-      navigator.userAgent.includes("Mac") && "ontouchend" in document;
+      navigator.userAgent.includes('Mac') && 'ontouchend' in document;
     }
   }]);
 }();
@@ -3707,7 +3707,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _src_js_player__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../src/js/player */ "./src/js/player.js");
+/* harmony import */ var _src_js_player__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/js/player */ "./src/js/player.js");
 
 var initPlayer = function initPlayer() {
   var players = document.querySelectorAll('.player');

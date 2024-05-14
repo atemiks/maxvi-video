@@ -1,28 +1,12 @@
 .nav {
     $this: &;
 
-    overflow-y: auto;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.875rem;
-    background: $color-white;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
+    display: none;
 
     @include breakpoint(lg) {
-        overflow: visible;
+        display: block;
         position: relative;
         z-index: 10;
-        padding: 0;
-        overscroll-behavior: auto;
-    }
-
-    &[aria-hidden="true"] {
-        display: none;
     }
 
     li {
@@ -46,29 +30,6 @@
             display: none;
         }
     }
-
-    &__close {
-        cursor: pointer;
-        position: absolute;
-        z-index: 10;
-        top: 0.875rem;
-        right: 0.875rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.5rem;
-        height: 2.5rem;
-        border: none;
-        border-radius: 50%;
-        background: $color-border-gray;
-        color: $color-black;
-
-        @include breakpoint(lg) {
-            display: none;
-        }
-    }
-
-    &__toggle {}
 
     &__list {
         margin: 0;
@@ -122,6 +83,8 @@
     }
 
     &-toggle {
+        $toggle: &;
+
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -138,6 +101,18 @@
 
         &--secondary {
             color: $color-body;
+
+            #{$toggle}__arrow {
+                color: $color-black;
+            }
+        }
+
+        &--white {
+            color: $color-white;
+
+            #{$toggle}__arrow {
+                color: $color-white;
+            }
         }
 
         &__icon {

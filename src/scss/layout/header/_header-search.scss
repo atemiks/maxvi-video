@@ -5,6 +5,9 @@
 
     @include breakpoint(lg) {
         flex-grow: 1;
+        max-width: 27.375rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__toggle {
@@ -55,7 +58,7 @@
         margin-right: auto;
 
         @include breakpoint(lg) {
-            max-width: 27.375rem;
+            max-width: none;
         }
     }
 
@@ -88,6 +91,7 @@
     }
 
     &__button {
+        cursor: pointer;
         position: absolute;
         top: 0;
         right: 0;

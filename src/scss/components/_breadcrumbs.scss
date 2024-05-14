@@ -35,6 +35,7 @@
 
         &:not([href]) {
             color: $color-title;
+            text-decoration: none;
         }
     }
 }
