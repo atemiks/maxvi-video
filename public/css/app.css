@@ -1323,7 +1323,11 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
-.header-search__input:focus {
+.header-search__input:not(:-moz-placeholder-shown) {
+  outline: none;
+  background-color: #fff;
+}
+.header-search__input:focus, .header-search__input:not(:placeholder-shown) {
   outline: none;
   background-color: #fff;
 }
@@ -1347,7 +1351,10 @@ body {
     color: #fff;
   }
 }
-.header-search__input:focus + .header-search__button {
+.header-search__input:not(:-moz-placeholder-shown) + .header-search__button {
+  color: #000;
+}
+.header-search__input:focus + .header-search__button, .header-search__input:not(:placeholder-shown) + .header-search__button {
   color: #000;
 }
 .header-search__icon {

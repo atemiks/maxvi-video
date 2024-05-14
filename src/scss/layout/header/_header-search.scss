@@ -84,7 +84,8 @@
             background-color: rgba($color: $color-white, $alpha: 0.2);
         }
 
-        &:focus {
+        &:focus,
+        &:not(:placeholder-shown) {
             outline: none;
             background-color: $color-white;
         }
@@ -109,7 +110,8 @@
             color: $color-white;
         }
 
-        #{$this}__input:focus+& {
+        #{$this}__input:focus+&,
+        #{$this}__input:not(:placeholder-shown)+& {
             color: $color-black;
         }
     }
